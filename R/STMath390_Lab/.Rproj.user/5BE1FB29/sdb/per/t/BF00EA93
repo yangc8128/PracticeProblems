@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# Requires z to have a number\n# pnorm(z,mean=0,sd=1) > pnorm(1,mean=0,sd=1)\n\n# Loading in some data\ndata(\"airquality\")\n\n# Confusing to use\n# attach(airquality) #detach(airquality)\n\n# Instead use this\nwith(airquality, {\n  #names(airquality)\n  # Normalizing the data, using T-distribution\n  zwind = (Wind - mean(Wind))/sd(Wind)\n  } )\n\nhist(zwind,prob=T) # Error Prob is not a graphica parameter\n\n# Number/Percent of observations within a single standard deviation\nprint( sum(zwind > -1 & zwind < 1) )\nprint( sum(zwind > -1 & zwind < 1)/length(zwind) )\n# Number/Percent of observations within a 1.5 standard deviation\nprint( sum(zwind > -1.5 & zwind < 1.5)/length(zwind) )\n\n# Questions",
+    "created" : 1463811478732.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1898321382",
+    "id" : "BF00EA93",
+    "lastKnownWriteTime" : 1463836342,
+    "last_content_update" : 1463836342511,
+    "path" : "~/GitHub/PracticeProblems/R/STMath390_Lab/STMATH390_Lab_P2.r",
+    "project_path" : "STMATH390_Lab_P2.r",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
