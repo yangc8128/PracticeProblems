@@ -1,0 +1,86 @@
+Significant Python Logging API <<import logging>>
+
+-----------------------LogRecord attributes-----------------------------
+args
+asctime		  %(asctime)s
+created		  %(created)f
+exc_info
+filename	  %(filename)s
+funcName	  %(funcName)s		Name of the function w/ the logging call
+levelName	  %(levelname)s
+levelno		  %(levelno)s
+lineno		  %(lineno)d		Source line number of the logging call
+module		  %(module)s		???
+msecs		    %(msecs)d
+message		  %(message)s		???
+msg
+name		    %(name)s
+pathname	  %(pathname)s
+process		  %(process)d
+processName	%(processName)s
+relativeCreated	%(relativeCreated)d	Time in milliseconds when the 
+                  LogRecored was created
+thread		  %(thread)d
+threadName	%(threadName)s
+
+------------------------------------------------------------------------
+
+>> logging.basicConfic([**kwarfs])
+
+Creates a StreamHandler w/ a default Formatter and a root logger.
+
+__Handler__		__Formatter__
+
+- logging.debug()
+- logging.info()
+- logging.error()
+- logging.critical()
+
+Come from the basicConfig() automatically of handlers are defined for
+the root logger
+
+Keyword arguments supported
+filename	--	Specifies that a FileHandler be created (filename) rather
+        than Stream Handler
+filemode	--	Specifies the mode to open the file
+				if filename is specified
+				if filemode is unspecified, dafaults to 'a'
+format		--	Defines the format the messages will present itself
+        within the handler
+datefmt		--	'%(asctime)s' can be specified through this argument
+				if datefmt is unspecified then it will keep to the
+        standard format
+level		--	Set the root looger level to the specified level
+stream	--	Use specified stream to initialize the StreamHandler
+				Not compatible w/ 'filename' if both present --> 'filename'
+
+>> logging.shutdown()
+
+Informs the logging system to perform an orderly shutdown by flushing
+and closing all the handlers. This should be called at application exit
+and no further use of the logging system should be made after this call.
+
+----------------------Logging_Components--------------------------------
+
+The logging library takes a modular approach and offers several
+categories of components: loggers, handlers, filters, formatters
+
+Loggers -- expose the interface that application code directly uses
+Handlers -- send the log records (created by loggers) to the
+        appropriate destination
+Filters -- provide a finer grained facility for determining which log
+        records to output
+Formatters -- specify the layout of log records in the final output
+
+------------------------------------------------------------------------
+>> logger = logging.getLogger(__name__)
+
+Returns a logger with the specified name or, if no name is specified,
+return a logger which is the root logger of the hierarchy. If specified,
+the name is typically a dot-separated hierarchical name like "a", "a.b"
+or "a.b.c.d". Choice of these name is entirely up to the development
+who is using logging.
+
+All calls to this function with a given name return the same logger
+instance. This means that instances never need to be passed between
+different parts of an application.

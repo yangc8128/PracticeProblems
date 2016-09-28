@@ -1,0 +1,25 @@
+1	-	1
+2	-	1,2
+3	-	1,3
+4	-	1,2,2
+5	-	1,5
+6	-	1,2,3
+7	-	1,7
+8	-	1,2,2,2
+9	-	1,3,3
+10	-	1,2,5
+
+2	-	2
+3	-	3
+4	-	2,2
+5	-	5
+6	-	2,3
+7	-	7
+8	-	2,2,2
+9	-	3,3
+10	-	2,5
+
+2,2,2,3,3,5,7
+// Each will not have prime factors greater than max at least
+// Keep track of amount of same primes from the numbers [2,max]
+// Compare number i's in current primeFactorization and check if > LCM_Factors[i]

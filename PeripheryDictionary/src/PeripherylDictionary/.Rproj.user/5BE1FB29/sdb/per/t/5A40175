@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# 1 Ready: Load in a text file\n# 2 Read line\n# 3 If a date -> fill date \n# 4 If other -> go back to 2\n# 5 Read line\n# 6 Print line\n# 7 Usr_parse\n# 8 Acceptable?\n# 9 If yes -> fill content\n# 10 If no -> go back to 7\n# 11 If fill_content is date -> go back to 3\n# 12 If fill_content is EOF -> finish\n# 13 If fill_content is other -> then ?",
+    "created" : 1463809038150.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3842223614",
+    "id" : "5A40175",
+    "lastKnownWriteTime" : 1463809480,
+    "last_content_update" : 1463809480613,
+    "path" : "~/GitHub/Misc/PeripheryDictionary/src/PeripherylDictionary/RunScript.r",
+    "project_path" : "RunScript.r",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,32 @@
+1,	1,	2,	3,	5,	8,	13,	21,	34 ---- 55
+
+(1+1+2+3+5+8+13+21+34) 3|n
+2 = 1 + 1
+8 = 3 + 5
+34 = 13 + 21
+
+Find last n within given range (i.e. 4 mil)
+
+If 3|n
+	then Sum: Fib(0~n)/2 == sum of all even numbers
+
+If !(3|n)
+	then remove odd element until you reach an even number.
+
+/*
+	Binet's formula: Closed Form Solution for nth Fibonacci number
+	Matrix generation
+		|1	1|n-2 |1|
+		|1	0|	  |1|
+		https://www.math.ubc.ca/~anstee/math223/223fibonacci.pdf
+	Recursive generation
+	
+	Summation up to nth
+		Fib(n+2) - 1;
+		
+	http://codereview.stackexchange.com/questions/35322/project-euler-question-2-sum-of-even-fibonacci-numbers-under-4-million
+	
+http://www.mathworks.com/help/matlab/math/matrix-indexing.html
+
+NumPy: https://docs.scipy.org/doc/numpy-dev/user/quickstart.html
+*/

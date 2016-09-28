@@ -1,0 +1,29 @@
+#include <regex>
+
+  //------------------------- readCheck-----------------------------------------
+	// Return the bool if the string taken from user is tagged ".html"
+	// Preconditions:	n/a
+	// Postconditoins:	returns truth value of input
+  bool readCheck() const;
+
+  //------------------------- Date-----------------------------------------
+	// Preconditions:	The string read in for date will maintain logical integrity
+  struct Date {
+    String date;
+    regex e("\\d\\d/{2}\\d\\d");
+    void safeDate(String str) {
+      while(!regex_match(str,e)) {
+        cout << "Incorrect format please edit" 
+        cin >> str;
+      }
+      date = str;
+    }
+  };
+  struct Entry{
+    Date date;
+    
+  }
+------------------------------------------------------------------------------------
+Console Application
+
+Able to choose which lines are attributed to what, as well as being able to modify

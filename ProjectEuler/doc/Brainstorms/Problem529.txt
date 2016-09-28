@@ -1,0 +1,105 @@
+Problem 529: 10-substrings
+
+A number is called 10-substring-friendly if every one of its
+	digits belongs to a 10-substring. For example, 3523014 is
+	10-substring-friendly, but 28546 is not.
+
+3523014 -> 4x 10-substrings
+
+Create a function
+	T(n) = { 10-substring-friendly | [1,10^n] }
+	T(2) = 9
+	T(5) = 3492
+
+T(2) = { 10-substring-friendly | [1,100] }
+     = 9
+
+// What can sum up to 10?
+// There is a finite combination
+// But all will be derived from this statement
+	1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1
+// What kind of limitations will be on this system?
+// For example on numbers with very large amounts of digits
+	1 000 000 000 = billion = 10 ^ 9 (note is the amount of comb.)
+// What's the largest 10-substring possible?
+	1 111 111 111 // 10x ones
+// What's the smallest 10-substrings possible?
+	1 9
+	2 8
+	3 7
+	4 6
+	5 5	// Which are 2-digit 10-substrings
+// What are the 3-digit 10-substrings?
+	1 9
+	2 8
+	3 7
+	4 6
+	5 5 // With any 0 in them
+	- - -
+	1 // sums of 9
+		0 9
+		1 8
+		2 7
+		3 6
+		4 5
+	2 // sums of 8
+	  0 8
+		1 7
+		2 6
+		3 5
+		4 4
+	3 // sums of 7
+		0 7
+		1 6
+		2 5
+		3 4
+	4 // sums of 6
+		0 6
+		1 5
+		2 4
+		3 3
+	5 // sums of 5
+		0 5
+		1 4
+		2 3
+	6 // sums of 4
+		0 4
+		1 3
+		2 2
+	7 // sums of 3
+		0 3
+		1 2
+	8 // sums of 2
+		0 2
+		1 1
+	9 // 0 1
+	- - -
+
+// What are largest for each digit? (w/o zeros)
+Largest: 1 111 111 111		10-digit
+					 211 111 111		9-digit
+					  31 111 111		8-digit
+						 4 111 111		7-digit
+						   511 111		6-digit
+							  61 111		5-digit
+								 7 111		4-digit
+								   811		3-digit
+									  91		2-digit
+// Note for algorithm: If a digit is included in a substring already,
+//	we do not need to iterate linearly. Just move to the next index that
+//	has yet to be included.
+
+// How are we dealing with zeros?
+
+sub-algorithms -> break = true, else will be false
+	// first create a string excluding/leap over 0's for this n-digit number
+	10-digit -> only string "1 111 111 111"
+					 -> else false
+	9-digit -> string "211 111 111"
+					-> string "1xx xxx xxx" (only one of the x's is a 2, rest 1's)
+					-> else false
+	8-digit -> string "31 111 111"
+					-> string "2x xxx xxx" (only one of the x's is a 2, rest 1's)
+					-> string "1x xxx xxx" (two of the x's is a 2, rest 1's)
+					-> else false
+	7-digit ->

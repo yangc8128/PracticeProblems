@@ -1,0 +1,15 @@
+Dictionary - SQL Columns
+
+Data (the word/event/...)
+Type (word/event/phrase/person/...)
+Date_Inputed (today's data / or given)
+	Year (Separate)?
+Define (definition, user given blurb, ... )
+Source
+
+// Functional requirements
+- Input from txt file (formatted txt files)
+ // at best handle invalid formatted entries
+- Input individual entry
+- Export given year
+- redundancy check (Merge?)

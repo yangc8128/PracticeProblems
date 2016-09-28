@@ -1,0 +1,74 @@
+>> Check Version
+git --version
+
+>> Set Config Values
+git config --global user.name "__NAME__"
+git config --global user.email "__EMAIL__"
+
+git config --list
+
+>> Need Help?
+git help _VB_
+git _VB_ --help
+
+>> Initialize A Repo From Existing Code
+git init    // Creates the .git file
+
+>> Before First Commit
+git status
+
+>> Add Files To Staging Area
+git add -A
+git status
+
+>> Remove Files From Staging Area
+git reset
+git status
+
+>> Our First Commit
+git add -A
+git commit -m "Initial Commit"
+git status
+git log
+
+>> Cloning A Remote Repo
+git clone <url> <where to clone>
+
+>> Viewing Information About The Remote Repository
+git remote -v
+git branch -a
+
+>> Pushing Changes
+> Commit Changes Like We Did Previously
+git diff
+git status
+git add -A
+git commit -m "Commit Message"
+> Then Push
+git pull origin master
+git push origin master
+
+>> Create A Branch For Desired Feature
+git branch _branch name_
+git checkout _branch name_
+
+>> After Commit Push Branch To Remote
+git push -u origin _branch name_    // FOR ASSOCIATION
+git branch -a
+
+// Post branch association
+git pull
+git push
+
+>> Merge A Branch
+git checkout master
+git pull origin master
+git branch --merged
+git merge _branch name_
+git push origin master
+
+>> Deleting A Branch
+git branch --merged
+git branch -d _branch name_   // Locally delete branch
+git branch -a
+git push origin --delete _branch name_    // Delete corresponding remote branch

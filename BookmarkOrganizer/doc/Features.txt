@@ -1,0 +1,11 @@
+Must
+- Create a new bmk file from an old one
+- Visualize target bookmark file as a DOM-Tree
+- Determine whether or not input is not a bmk file
+Should
+- Maintain size of a node (Directories/Links)
+- Limit visualization of a single DOM-Tree
+Could
+- Apply Category-Tags to Directories/Links
+- Auto splice a bmk file via its tags
+Won't

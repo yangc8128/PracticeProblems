@@ -1,0 +1,23 @@
+999 * 999 is the largest product of two 3-digit numbers
+ = 998001 // 997799 largest possible palindrome
+
+999 * 900 = 899,100
+
+Full range of possible factors is 100 - 999
+	-->  possible combination 9*10*10 = 100
+
+Largest possible product
+	999 * 999 = 998001
+Smallest possible product
+	900 * 900 = 810000
+Largest possible palindrome
+	997799 = 11 * 90709
+Viable pattern
+	XNYYNX
+Y -> [0,9] // so there will be 10 options per (X,N) pair
+X -> largest value 9
+N -> [0,9] // so there will be 10 options per (9,N) pair
+
+Answer 913 * 993 = 906609
+
+// How can you know that there will be a product of a 4-digit number?

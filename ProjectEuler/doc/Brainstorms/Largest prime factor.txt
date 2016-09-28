@@ -1,0 +1,7 @@
+Largest prime factor
+
+600851475143
+
+Use a stack
+Iterating from [2,int(number^.5)]
+stack.pop()

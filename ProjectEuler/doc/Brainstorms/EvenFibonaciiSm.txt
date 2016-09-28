@@ -1,0 +1,38 @@
+Fibonacci Sequence: Even sum
+1,2,3,4,5,6,7, 8,  9, 10
+1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,1597,2584
+
+// SUM of all Fibonacci Sequence to the nth element
+n = 6
+sum = 1+1+2+3+5+8 = 21(n=8) - 1 =20
+F_{n+2} - 1	,	n>=2
+
+
+  2,    8,      34,      144,        610,         2584
+
+	10
+		44
+			 188
+				     798
+						 3382
+	10	40	 150	      610	 2590
+--------------------Matrix-----------------------------
+(0	1)^(n-1)	(0)		(a_n)
+(1	1)		(1)	=	(a_{n+1})
+
+---------------------Vector----------------------------
+pushback(0),pushback(1)
+for i = 2:n
+	pushback(arr[i-2] + arr[i-1])
+-------------------------------------------------------
+MAX = 4.e+6
+
+Brute
+	// Iterate through Fibonacci
+	// Sum up even numbers along the way
+	// Stop iteration when Fibonacci goes beyond MAX
+Brute
+	// Generate the whole list
+	// Summate 
+Efficient
+	// 

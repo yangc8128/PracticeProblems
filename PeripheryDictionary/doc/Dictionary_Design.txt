@@ -1,0 +1,16 @@
+Design file for personal_Project : Dictionary
+
+Project Assumptions
+  -- It is either ran as a main / exe
+  -- Zero-feature: Every new entry will be dealt with by user
+  -- 
+
+
+Project Goals
+  -- Primary: Portability
+  -- Primary: Space efficiency
+  -- Primary: 
+  -- Secondary: 
+
+Project Utilizes
+  -- 

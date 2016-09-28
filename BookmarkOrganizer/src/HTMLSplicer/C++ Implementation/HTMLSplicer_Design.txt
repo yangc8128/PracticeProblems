@@ -1,0 +1,25 @@
+Design file for personal_Project : HTMLSplicer
+
+Project Assumptions
+  -- It is either ran as a main / exe
+  -- The save location for the new/appended bookmark
+	is in the same location as the original
+  -- It only requires one run, to stitch together 
+	a pseudo final bookmark file
+  -- Will not accept folders within an already picked folder.
+	Therefore it may end with some unhandeled folders
+  -- Accepts errors of non-existent / illogical folders
+  -- 
+
+Project Goals
+  -- Primary: Read in a HTML file as a text
+  -- Primary: Efficiently identify folders, and id names
+  -- Primary: Skip irrelvant data with find (from String)
+  -- Secondary: Read input file as compact_version
+  -- Secondary: Stitch together from many different files
+
+Project Utilizes
+  -- fopen/fclose/fprint
+	>> read input HTML file
+	>> append output file
+  -- 

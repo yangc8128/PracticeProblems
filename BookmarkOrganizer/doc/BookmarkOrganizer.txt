@@ -1,0 +1,14 @@
+HTML Splicer
+
+// Easier to have GUI, so be able to take a HTML bookmark and
+// add elements so I can apply checks to certain folders
+// be able to choose copy only, copy and delete
+// Merge if it already exists
+
+Leads on using a dom-tree visualizer
+http://stackoverflow.com/questions/14911274/tools-to-visualize-an-html-document-tree-dom-tree
+
+http://seandokko.com/dom-visualization/
+
+On Windows
+"tree /f > tree.txt"
