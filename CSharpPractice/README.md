@@ -1,5 +1,7 @@
 # CSharp Practice
 
+You need to install dotnet cli w/ .NET SDKs
+
 ## General
 - dotnet new gitignore
 - dotnet new xunit
