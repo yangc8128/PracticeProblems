@@ -11,7 +11,8 @@
 	"extensions": [
 		//"jaredly.reason-vscode",
 		"chenglou92.rescript-vscode",
-		"freebroccolo.reasonml"
+		"freebroccolo.reasonml",
+		"editorconfig.editorconfig"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
