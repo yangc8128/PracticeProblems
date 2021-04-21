@@ -35,7 +35,13 @@ let make = () => {
         options
         ->Belt.Array.mapWithIndex((i, option) => {
           /* <div key=option > React.string(option)</div>; */
-          React.string(option);
+          <input
+            id=option
+            type_="checkbox"
+            /* onClick={_ => self.sent(Toggle)} */
+            /* checked=self.state.finished */
+             />;
+          <label htmlFor=option> (React.string(option)) </label>;
         })
         ->React.array
       }
